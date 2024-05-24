@@ -1,6 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 
-function NavBar() {
+function ClientNavBar() {
     return (
         <div className="text-white">
             <div className="navbar bg-black">
@@ -138,4 +138,4 @@ function NavBar() {
     );
 }
 
-export default NavBar;
+export default ClientNavBar;
