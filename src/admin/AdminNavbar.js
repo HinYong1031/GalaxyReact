@@ -1,17 +1,10 @@
-import Sidebar from "./Sidebar";
 import { useEffect, useState } from "react";
 
-function AdminNavBar() {
+function AdminNavBar({ toggleSidebar }) {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false); //dropdown is initially closed by initialise false
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
-    };
-
-    const [isSidebarOpen, setSidebarOpen] = useState(true);
-
-    const toggleSidebar = () => {
-        setSidebarOpen(!isSidebarOpen);
     };
 
     const [theme, setTheme] = useState(
@@ -25,11 +18,13 @@ function AdminNavBar() {
     }, [theme]);
 
     const themeSwitcher = (e) => {
-        if (e.target.checked) {
-            setTheme("dracula");
-        } else {
-            setTheme("light");
-        }
+        // Simple and legacy if-else coding style
+        // if (e.target.checked) {
+        //     setTheme("dracula");
+        // } else {
+        //     setTheme("light");
+        // }
+        setTheme(e.target.checked ? "dracula" : "light");
     };
     return (
         <>
@@ -191,7 +186,6 @@ function AdminNavBar() {
                     </div>
                 </div>
             </nav>
-            <Sidebar isOpen={isSidebarOpen} />
         </>
     );
 }

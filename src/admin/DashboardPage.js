@@ -4,9 +4,8 @@ import DashboardContent from "./DashboardContent";
 function Dashboard() {
     return (
         <>
-            <DefaultLayout>
-                <DashboardContent />
-            </DefaultLayout>
+            <DefaultLayout />
+            <DashboardContent />
         </>
     );
 }

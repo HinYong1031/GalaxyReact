@@ -5,6 +5,7 @@ import TitleUpdater from "./TitleUpdater"; // Import the component that handles 
 import HomePage from "./HomePage";
 import AboutUs from "./AboutUs";
 import Dashboard from "./admin/DashboardPage";
+import AddProduct from "./admin/ProductPage";
 
 function App() {
     const [loading, setLoading] = useState(true);
@@ -32,6 +33,7 @@ function App() {
             <Routes>
                 <Route path="/admin">
                     <Route path="dashboard" element={<Dashboard />} />
+                    <Route path="addproduct" element={<AddProduct />} />
                     {/* Add more admin routes as needed */}
                 </Route>
             </Routes>

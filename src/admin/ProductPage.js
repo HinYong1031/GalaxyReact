@@ -1,11 +1,11 @@
 import DefaultLayout from "./DefaultLayout";
-import DashboardContent from "./DashboardContent";
+import ProductCreate from "./ProductCreate";
 
 function Product() {
     return (
         <>
             <DefaultLayout>
-                <DashboardContent />
+                <ProductCreate />
             </DefaultLayout>
         </>
     );
